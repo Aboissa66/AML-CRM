@@ -1,0 +1,437 @@
+txn_id,customer_id,date,amount,currency,direction,channel,counterparty,counterparty_country,description
+T-00001,30,2026-08-12 09:00,12298.13,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00002,8,2026-08-12 09:01,144139.54,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00003,10,2026-08-12 09:01,50734.4,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00004,1,2026-08-12 09:07,30135.75,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00005,22,2026-08-12 09:08,77432.11,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00006,7,2026-08-12 09:09,13163.62,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00007,23,2026-08-12 09:10,9404.11,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00008,29,2026-08-12 09:11,7184.08,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00009,18,2026-08-12 09:15,7066.03,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00010,12,2026-08-12 09:16,4740.35,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00011,21,2026-08-12 09:20,6204.42,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00012,15,2026-08-12 09:22,11758.03,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00013,17,2026-08-12 09:22,17709.97,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00014,26,2026-08-12 09:23,3975.63,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00015,13,2026-08-12 09:25,60390.97,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00016,27,2026-08-12 09:31,56013.31,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00017,28,2026-08-12 09:33,82347.05,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00018,20,2026-08-12 09:34,12817.17,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00019,24,2026-08-12 09:34,50320.99,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00020,9,2026-08-12 09:36,6482.58,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00021,25,2026-08-12 09:40,8111.03,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00022,14,2026-08-12 09:43,8697.61,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00023,11,2026-08-12 09:45,36655.68,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00024,19,2026-08-12 09:52,36765.6,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00025,16,2026-08-12 09:59,5110.79,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00026,28,2026-08-13 13:07,9103.48,AED,OUT,Cheque,Sharjah Rentals,United Arab Emirates,Payment
+T-00027,5,2026-08-14 09:09,310237.52,AED,IN,Cash,Branch cash collection,United Arab Emirates,Daily cash takings
+T-00028,28,2026-08-14 10:14,8187.49,AED,OUT,Transfer,Noon.com,United Arab Emirates,Payment
+T-00029,26,2026-08-14 13:33,831.82,AED,OUT,Cheque,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00030,17,2026-08-14 13:48,3120.96,AED,OUT,Transfer,Noon.com,United Arab Emirates,Payment
+T-00031,22,2026-08-14 15:19,7794.82,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00032,23,2026-08-14 17:22,1940.4,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00033,26,2026-08-15 09:11,295.93,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00034,26,2026-08-15 10:19,504.4,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00035,29,2026-08-15 13:34,1452.62,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00036,23,2026-08-15 19:38,914.83,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00037,11,2026-08-16 10:09,5916.36,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00038,20,2026-08-16 10:48,1683.51,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00039,20,2026-08-16 12:25,1246.25,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00040,6,2026-08-16 12:49,26585.5,AED,IN,Cash,Donation box,United Arab Emirates,Donations
+T-00041,9,2026-08-16 13:06,1396.68,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00042,29,2026-08-16 14:53,684.69,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00043,16,2026-08-16 15:05,481.09,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00044,25,2026-08-17 12:20,1676.68,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00045,29,2026-08-17 12:32,938.81,AED,OUT,Card,Etisalat,United Arab Emirates,Payment
+T-00046,24,2026-08-17 19:30,5782.0,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00047,28,2026-08-18 15:37,9682.13,AED,OUT,Cheque,Etisalat,United Arab Emirates,Payment
+T-00048,7,2026-08-18 15:53,2161.23,AED,OUT,Card,Carrefour,United Arab Emirates,Payment
+T-00049,19,2026-08-19 12:44,4449.01,AED,OUT,Cheque,Etisalat,United Arab Emirates,Payment
+T-00050,23,2026-08-19 12:48,976.29,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00051,8,2026-08-19 15:39,16728.38,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00052,1,2026-08-20 09:39,2555.18,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00053,22,2026-08-20 10:44,17978.0,AED,OUT,Card,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00054,18,2026-08-20 11:35,783.29,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00055,1,2026-08-20 18:39,4648.86,AED,OUT,Cheque,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00056,15,2026-08-20 19:31,1140.34,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00057,21,2026-08-20 20:52,972.26,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00058,3,2026-08-21 16:05,60000,AED,IN,Cash,Walk-in customer,United Arab Emirates,Gold bullion sale
+T-00059,27,2026-08-21 17:57,7163.84,AED,OUT,Cheque,Al Futtaim Motors,United Arab Emirates,Payment
+T-00060,25,2026-08-21 18:43,985.85,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00061,18,2026-08-21 19:41,749.19,AED,OUT,Card,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00062,21,2026-08-22 13:19,537.08,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00063,15,2026-08-22 19:47,1504.76,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00064,13,2026-08-23 09:02,12069.79,AED,OUT,Card,Carrefour,United Arab Emirates,Payment
+T-00065,15,2026-08-23 09:10,1605.22,AED,OUT,Card,Al Futtaim Motors,United Arab Emirates,Payment
+T-00066,9,2026-08-23 11:16,725.88,AED,OUT,Card,Al Futtaim Motors,United Arab Emirates,Payment
+T-00067,3,2026-08-23 11:27,100000,AED,OUT,Wire,Istanbul Gold Refinery,Turkey,Gold purchase
+T-00068,30,2026-08-23 15:16,2009.19,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00069,13,2026-08-23 18:41,10672.43,AED,OUT,Cheque,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00070,14,2026-08-23 19:21,1032.1,AED,OUT,Card,Sharjah Rentals,United Arab Emirates,Payment
+T-00071,25,2026-08-23 20:51,726.15,AED,OUT,Cheque,Sharjah Rentals,United Arab Emirates,Payment
+T-00072,18,2026-08-24 10:47,1403.23,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00073,10,2026-08-24 15:24,6315.71,AED,OUT,Cheque,Etisalat,United Arab Emirates,Payment
+T-00074,12,2026-08-24 16:58,639.2,AED,OUT,Transfer,Noon.com,United Arab Emirates,Payment
+T-00075,22,2026-08-24 17:43,16015.64,AED,OUT,Cheque,Etisalat,United Arab Emirates,Payment
+T-00076,27,2026-08-24 17:55,5455.53,AED,OUT,Card,Carrefour,United Arab Emirates,Payment
+T-00077,19,2026-08-25 11:38,4677.34,AED,OUT,Cheque,Etisalat,United Arab Emirates,Payment
+T-00078,11,2026-08-25 15:34,7023.09,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00079,18,2026-08-25 17:05,1054.07,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00080,16,2026-08-25 19:51,773.98,AED,OUT,Cheque,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00081,28,2026-08-25 20:02,12801.15,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00082,13,2026-08-25 20:11,4900.95,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00083,5,2026-08-26 11:19,210000,AED,OUT,Wire,Kish Exchange,Iran,Customer remittance
+T-00084,21,2026-08-26 13:02,928.86,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00085,15,2026-08-26 20:27,1535.02,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00086,1,2026-08-27 09:52,6120.24,AED,OUT,Cheque,Noon.com,United Arab Emirates,Payment
+T-00087,7,2026-08-27 10:28,2093.23,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00088,21,2026-08-27 13:26,1089.84,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00089,8,2026-08-27 18:39,26098.77,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00090,24,2026-08-27 19:03,7314.68,AED,OUT,Card,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00091,27,2026-08-28 09:42,7942.97,AED,OUT,Transfer,Noon.com,United Arab Emirates,Payment
+T-00092,7,2026-08-28 14:06,1222.47,AED,OUT,Cheque,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00093,10,2026-08-28 15:16,10501.05,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00094,14,2026-08-28 18:05,1623.66,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00095,27,2026-08-28 19:55,5286.65,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00096,23,2026-08-28 19:58,769.01,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00097,17,2026-08-29 10:36,2084.37,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00098,13,2026-08-29 12:27,8180.74,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00099,6,2026-08-29 12:27,34019.6,AED,IN,Cash,Donation box,United Arab Emirates,Donations
+T-00100,9,2026-08-29 14:17,1044.58,AED,OUT,Card,Carrefour,United Arab Emirates,Payment
+T-00101,25,2026-08-29 15:47,1042.46,AED,OUT,Card,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00102,30,2026-08-29 16:59,2163.37,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00103,14,2026-08-29 17:08,1216.42,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00104,16,2026-08-30 09:09,1006.69,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00105,18,2026-08-30 10:08,561.69,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00106,17,2026-08-30 11:29,2172.96,AED,OUT,Card,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00107,11,2026-08-30 12:54,6473.82,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00108,8,2026-08-30 15:02,13909.88,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00109,30,2026-08-30 16:29,1023.57,AED,OUT,Cheque,Carrefour,United Arab Emirates,Payment
+T-00110,7,2026-08-30 19:58,939.17,AED,OUT,Transfer,Noon.com,United Arab Emirates,Payment
+T-00111,6,2026-08-31 11:30,70000,AED,OUT,Wire,Relief Partners Sanaa,Yemen,Aid project
+T-00112,3,2026-08-31 11:39,100000,AED,OUT,Wire,Istanbul Gold Refinery,Turkey,Gold purchase
+T-00113,25,2026-08-31 13:49,1255.76,AED,OUT,Cheque,Sharjah Rentals,United Arab Emirates,Payment
+T-00114,22,2026-08-31 20:46,10657.75,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00115,14,2026-09-01 12:01,1156.57,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00116,20,2026-09-02 10:26,1470.01,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00117,28,2026-09-02 16:33,16139.35,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00118,8,2026-09-02 17:59,26779.61,AED,OUT,Cheque,Etisalat,United Arab Emirates,Payment
+T-00119,24,2026-09-02 19:56,8050.96,AED,OUT,Card,Al Futtaim Motors,United Arab Emirates,Payment
+T-00120,9,2026-09-03 09:48,822.0,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00121,23,2026-09-03 10:24,1081.98,AED,OUT,Cheque,Noon.com,United Arab Emirates,Payment
+T-00122,8,2026-09-03 13:28,16520.85,AED,OUT,Card,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00123,15,2026-09-03 15:12,2132.97,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00124,13,2026-09-03 15:21,5712.06,AED,OUT,Cheque,Sharjah Rentals,United Arab Emirates,Payment
+T-00125,12,2026-09-03 16:58,694.6,AED,OUT,Card,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00126,22,2026-09-04 09:04,11440.67,AED,OUT,Cheque,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00127,5,2026-09-04 09:24,446857.82,AED,IN,Cash,Branch cash collection,United Arab Emirates,Daily cash takings
+T-00128,18,2026-09-04 11:43,1454.77,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00129,7,2026-09-04 16:29,1779.83,AED,OUT,Cheque,Al Futtaim Motors,United Arab Emirates,Payment
+T-00130,26,2026-09-04 17:44,710.56,AED,OUT,Cheque,Al Futtaim Motors,United Arab Emirates,Payment
+T-00131,28,2026-09-04 18:25,12641.36,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00132,25,2026-09-04 19:17,792.55,AED,OUT,Card,Sharjah Rentals,United Arab Emirates,Payment
+T-00133,19,2026-09-04 19:20,3728.91,AED,OUT,Card,Etisalat,United Arab Emirates,Payment
+T-00134,21,2026-09-04 20:37,828.76,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00135,3,2026-09-05 16:40,120000,AED,IN,Cash,Walk-in customer,United Arab Emirates,Gold bullion sale
+T-00136,12,2026-09-06 10:51,636.68,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00137,10,2026-09-06 11:11,7509.07,AED,OUT,Cheque,Carrefour,United Arab Emirates,Payment
+T-00138,10,2026-09-07 11:14,3768.21,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00139,14,2026-09-07 11:48,908.99,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00140,17,2026-09-07 15:25,3543.43,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00141,29,2026-09-07 17:13,820.45,AED,OUT,Card,Sharjah Rentals,United Arab Emirates,Payment
+T-00142,7,2026-09-07 17:59,1741.55,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00143,22,2026-09-08 17:47,6287.72,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00144,3,2026-09-10 11:09,100000,AED,OUT,Wire,Istanbul Gold Refinery,Turkey,Gold purchase
+T-00145,16,2026-09-11 09:02,5511.06,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00146,26,2026-09-11 09:03,4392.11,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00147,17,2026-09-11 09:05,16149.08,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00148,14,2026-09-11 09:08,8757.5,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00149,28,2026-09-11 09:12,81100.78,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00150,1,2026-09-11 09:13,30777.04,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00151,27,2026-09-11 09:14,68460.54,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00152,11,2026-09-11 09:16,32793.78,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00153,24,2026-09-11 09:16,41414.05,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00154,30,2026-09-11 09:16,11401.94,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00155,23,2026-09-11 09:17,10226.56,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00156,13,2026-09-11 09:20,60320.19,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00157,29,2026-09-11 09:23,8059.2,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00158,7,2026-09-11 09:28,14024.39,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00159,22,2026-09-11 09:28,89300.58,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00160,8,2026-09-11 09:30,151660.46,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00161,19,2026-09-11 09:39,40765.32,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00162,20,2026-09-11 09:40,14052.02,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00163,18,2026-09-11 09:44,8045.84,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00164,12,2026-09-11 09:48,4794.53,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00165,25,2026-09-11 09:48,9723.05,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00166,10,2026-09-11 09:53,47420.58,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00167,9,2026-09-11 09:55,7616.5,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00168,15,2026-09-11 09:56,12690.8,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00169,21,2026-09-11 09:58,5826.85,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00170,25,2026-09-12 11:25,1872.88,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00171,7,2026-09-12 16:37,1842.0,AED,OUT,Card,Etisalat,United Arab Emirates,Payment
+T-00172,6,2026-09-13 12:24,24070.96,AED,IN,Cash,Donation box,United Arab Emirates,Donations
+T-00173,28,2026-09-13 20:45,16585.83,AED,OUT,Card,Al Futtaim Motors,United Arab Emirates,Payment
+T-00174,1,2026-09-14 17:34,3485.34,AED,OUT,Cheque,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00175,15,2026-09-15 10:22,1943.69,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00176,9,2026-09-15 10:43,1018.73,AED,OUT,Transfer,Noon.com,United Arab Emirates,Payment
+T-00177,5,2026-09-15 11:11,95000,AED,OUT,Wire,Damascus Money Transfer,Syria,Customer remittance
+T-00178,22,2026-09-15 12:29,10633.58,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00179,18,2026-09-15 15:56,834.13,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00180,7,2026-09-16 09:20,2049.66,AED,OUT,Cheque,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00181,13,2026-09-16 14:14,13853.66,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00182,8,2026-09-16 19:33,14374.47,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00183,15,2026-09-17 12:41,1493.74,AED,OUT,Cheque,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00184,11,2026-09-17 13:18,4997.59,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00185,19,2026-09-17 15:42,6050.61,AED,OUT,Cheque,Al Futtaim Motors,United Arab Emirates,Payment
+T-00186,24,2026-09-17 15:57,8336.64,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00187,19,2026-09-17 17:19,3009.71,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00188,12,2026-09-18 11:28,795.54,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00189,23,2026-09-18 13:07,1092.14,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00190,28,2026-09-18 13:14,7016.41,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00191,28,2026-09-18 17:25,16753.37,AED,OUT,Cheque,Noon.com,United Arab Emirates,Payment
+T-00192,17,2026-09-18 20:53,2714.12,AED,OUT,Card,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00193,7,2026-09-19 10:39,958.6,AED,OUT,Transfer,Noon.com,United Arab Emirates,Payment
+T-00194,24,2026-09-19 19:13,4980.89,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00195,10,2026-09-19 19:32,9807.17,AED,OUT,Cheque,Noon.com,United Arab Emirates,Payment
+T-00196,19,2026-09-19 20:40,7738.44,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00197,27,2026-09-20 10:29,12268.63,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00198,2,2026-09-20 13:54,49500,AED,IN,Cash,Branch deposit,United Arab Emirates,Cash deposit
+T-00199,23,2026-09-21 15:05,1981.62,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00200,16,2026-09-21 16:15,592.02,AED,OUT,Cheque,Etisalat,United Arab Emirates,Payment
+T-00201,18,2026-09-21 20:34,571.74,AED,OUT,Card,Noon.com,United Arab Emirates,Payment
+T-00202,2,2026-09-22 13:00,52000,AED,IN,Cash,Branch deposit,United Arab Emirates,Cash deposit
+T-00203,28,2026-09-22 14:02,6336.16,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00204,12,2026-09-22 15:32,679.41,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00205,30,2026-09-22 15:34,1250.19,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00206,11,2026-09-22 17:09,3186.9,AED,OUT,Card,Sharjah Rentals,United Arab Emirates,Payment
+T-00207,9,2026-09-22 18:13,1050.3,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00208,21,2026-09-23 09:48,753.48,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00209,1,2026-09-23 15:47,4459.79,AED,OUT,Card,Noon.com,United Arab Emirates,Payment
+T-00210,21,2026-09-23 15:48,1038.24,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00211,1,2026-09-23 16:27,2599.01,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00212,11,2026-09-23 17:10,5865.5,AED,OUT,Card,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00213,14,2026-09-23 19:25,1239.24,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00214,29,2026-09-24 09:18,1261.69,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00215,28,2026-09-24 09:29,6068.83,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00216,16,2026-09-24 12:32,980.05,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00217,11,2026-09-24 12:47,5423.12,AED,OUT,Cheque,Al Futtaim Motors,United Arab Emirates,Payment
+T-00218,26,2026-09-24 12:48,528.14,AED,OUT,Card,Al Futtaim Motors,United Arab Emirates,Payment
+T-00219,8,2026-09-24 13:11,16881.32,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00220,2,2026-09-24 13:54,47800,AED,IN,Cash,Branch deposit,United Arab Emirates,Cash deposit
+T-00221,12,2026-09-24 14:11,445.75,AED,OUT,Cheque,Etisalat,United Arab Emirates,Payment
+T-00222,24,2026-09-24 14:55,4576.85,AED,OUT,Cheque,Carrefour,United Arab Emirates,Payment
+T-00223,27,2026-09-24 16:26,11319.64,AED,OUT,Transfer,Noon.com,United Arab Emirates,Payment
+T-00224,21,2026-09-24 19:27,978.8,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00225,30,2026-09-24 19:58,846.93,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00226,9,2026-09-25 09:03,572.59,AED,OUT,Card,Carrefour,United Arab Emirates,Payment
+T-00227,5,2026-09-25 09:51,330653.69,AED,IN,Cash,Branch cash collection,United Arab Emirates,Daily cash takings
+T-00228,22,2026-09-25 12:17,17560.26,AED,OUT,Cheque,Sharjah Rentals,United Arab Emirates,Payment
+T-00229,2,2026-09-25 13:31,53900,AED,IN,Cash,Branch deposit,United Arab Emirates,Cash deposit
+T-00230,24,2026-09-25 15:35,5968.13,AED,OUT,Card,Al Futtaim Motors,United Arab Emirates,Payment
+T-00231,1,2026-09-25 17:51,5500.65,AED,OUT,Cheque,Al Futtaim Motors,United Arab Emirates,Payment
+T-00232,20,2026-09-26 16:54,2831.67,AED,OUT,Cheque,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00233,2,2026-09-27 10:01,180000,AED,OUT,Wire,Pars Commodities Co,Iran,Goods payment
+T-00234,26,2026-09-27 10:21,788.68,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00235,23,2026-09-27 14:18,1150.04,AED,OUT,Card,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00236,6,2026-09-28 12:10,29420.73,AED,IN,Cash,Donation box,United Arab Emirates,Donations
+T-00237,30,2026-09-28 18:24,1434.59,AED,OUT,Cheque,Carrefour,United Arab Emirates,Payment
+T-00238,30,2026-09-29 09:31,1784.56,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00239,15,2026-09-29 11:41,2233.24,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00240,17,2026-09-29 19:02,2053.61,AED,OUT,Cheque,Sharjah Rentals,United Arab Emirates,Payment
+T-00241,13,2026-09-29 20:12,9974.03,AED,OUT,Card,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00242,5,2026-09-30 11:31,130000,AED,OUT,Wire,Sanaa Remit,Yemen,Customer remittance
+T-00243,6,2026-09-30 11:57,85000,AED,OUT,Wire,Relief Partners Sanaa,Yemen,Aid project
+T-00244,27,2026-09-30 16:12,6642.25,AED,OUT,Card,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00245,20,2026-10-01 11:07,1173.19,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00246,22,2026-10-01 11:13,9856.45,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00247,14,2026-10-01 17:45,1775.7,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00248,17,2026-10-02 09:59,3365.1,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00249,26,2026-10-02 12:00,811.88,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00250,19,2026-10-02 16:43,3131.38,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00251,10,2026-10-02 17:52,5509.6,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00252,1,2026-10-02 20:45,4740.66,AED,OUT,Card,Noon.com,United Arab Emirates,Payment
+T-00253,24,2026-10-03 09:07,3445.75,AED,OUT,Cheque,Noon.com,United Arab Emirates,Payment
+T-00254,10,2026-10-03 09:40,10642.53,AED,OUT,Cheque,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00255,8,2026-10-03 11:24,15456.14,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00256,9,2026-10-03 14:55,961.21,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00257,18,2026-10-03 16:48,1614.89,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00258,18,2026-10-03 18:21,1133.79,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00259,29,2026-10-03 20:24,732.95,AED,OUT,Cheque,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00260,13,2026-10-04 13:05,10249.21,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00261,19,2026-10-04 13:22,7647.58,AED,OUT,Cheque,Etisalat,United Arab Emirates,Payment
+T-00262,14,2026-10-04 14:08,1148.75,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00263,21,2026-10-04 14:46,1250.57,AED,OUT,Card,Noon.com,United Arab Emirates,Payment
+T-00264,12,2026-10-04 14:48,823.8,AED,OUT,Cheque,Al Futtaim Motors,United Arab Emirates,Payment
+T-00265,24,2026-10-04 18:19,4347.92,AED,OUT,Cheque,Carrefour,United Arab Emirates,Payment
+T-00266,29,2026-10-05 11:11,701.98,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00267,18,2026-10-05 11:45,1073.17,AED,OUT,Card,Etisalat,United Arab Emirates,Payment
+T-00268,15,2026-10-05 14:25,815.23,AED,OUT,Cheque,Carrefour,United Arab Emirates,Payment
+T-00269,3,2026-10-05 16:58,80000,AED,IN,Cash,Walk-in customer,United Arab Emirates,Gold bullion sale
+T-00270,18,2026-10-05 19:37,583.53,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00271,9,2026-10-06 16:38,1080.7,AED,OUT,Card,Al Futtaim Motors,United Arab Emirates,Payment
+T-00272,25,2026-10-06 17:08,980.34,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00273,25,2026-10-06 17:44,649.75,AED,OUT,Card,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00274,16,2026-10-06 18:33,446.17,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00275,22,2026-10-07 09:18,15339.21,AED,OUT,Card,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00276,30,2026-10-07 09:56,1250.02,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00277,14,2026-10-07 13:52,814.78,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00278,21,2026-10-07 16:00,756.95,AED,OUT,Cheque,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00279,13,2026-10-07 16:32,7458.33,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00280,19,2026-10-07 18:32,4689.66,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00281,14,2026-10-07 19:36,673.29,AED,OUT,Card,Carrefour,United Arab Emirates,Payment
+T-00282,20,2026-10-08 12:55,2595.53,AED,OUT,Cheque,Noon.com,United Arab Emirates,Payment
+T-00283,4,2026-10-10 10:39,400000,USD,IN,Wire,Northwind Ventures Ltd,Seychelles,Shareholder loan
+T-00284,23,2026-10-11 09:00,9081.14,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00285,13,2026-10-11 09:01,64875.74,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00286,16,2026-10-11 09:02,5160.09,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00287,17,2026-10-11 09:03,16310.92,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00288,25,2026-10-11 09:03,10121.37,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00289,18,2026-10-11 09:04,7267.07,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00290,22,2026-10-11 09:04,94292.86,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00291,20,2026-10-11 09:05,12577.22,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00292,28,2026-10-11 09:12,88431.7,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00293,27,2026-10-11 09:16,58699.06,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00294,12,2026-10-11 09:17,4394.77,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00295,9,2026-10-11 09:18,7704.71,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00296,19,2026-10-11 09:22,43732.63,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00297,8,2026-10-11 09:31,162471.63,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00298,7,2026-10-11 09:34,11735.66,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00299,21,2026-10-11 09:38,5538.18,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00300,11,2026-10-11 09:42,37940.92,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00301,30,2026-10-11 09:42,13480.52,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00302,14,2026-10-11 09:48,7917.68,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00303,24,2026-10-11 09:49,43807.94,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00304,10,2026-10-11 09:50,48138.92,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00305,15,2026-10-11 09:53,11062.55,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00306,1,2026-10-11 09:58,31828.38,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00307,26,2026-10-11 09:58,3547.13,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00308,29,2026-10-11 09:58,6834.19,AED,IN,Transfer,Payroll / receivables,United Arab Emirates,Monthly income
+T-00309,4,2026-10-11 15:33,720000,AED,OUT,Wire,Lakeview Trading,Turkey,Consultancy fees
+T-00310,28,2026-10-12 10:20,8441.54,AED,OUT,Card,Al Futtaim Motors,United Arab Emirates,Payment
+T-00311,4,2026-10-12 11:16,650000,AED,OUT,Wire,Coral Trust Holdings S.A.,Panama,Management fees
+T-00312,27,2026-10-12 17:46,12259.87,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00313,25,2026-10-13 09:37,1848.06,AED,OUT,Cheque,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00314,13,2026-10-13 11:35,11848.81,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00315,6,2026-10-13 12:07,26478.28,AED,IN,Cash,Donation box,United Arab Emirates,Donations
+T-00316,9,2026-10-13 20:45,899.27,AED,OUT,Card,Carrefour,United Arab Emirates,Payment
+T-00317,28,2026-10-14 09:12,15883.97,AED,OUT,Card,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00318,7,2026-10-14 09:53,1490.75,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00319,10,2026-10-14 13:23,7536.42,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00320,22,2026-10-14 20:14,11567.8,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00321,28,2026-10-14 20:45,15886.68,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00322,30,2026-10-15 09:01,2147.72,AED,OUT,Cheque,Al Futtaim Motors,United Arab Emirates,Payment
+T-00323,15,2026-10-15 11:35,1156.15,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00324,20,2026-10-15 14:10,1021.93,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00325,8,2026-10-15 17:50,20493.98,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00326,5,2026-10-16 09:54,353285.82,AED,IN,Cash,Branch cash collection,United Arab Emirates,Daily cash takings
+T-00327,7,2026-10-16 11:28,30000,AED,IN,Transfer,R. Kapoor,India,Transfer
+T-00328,18,2026-10-16 15:16,582.72,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00329,29,2026-10-16 16:27,799.71,AED,OUT,Card,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00330,7,2026-10-16 18:19,1773.56,AED,OUT,Cheque,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00331,11,2026-10-16 18:39,3591.14,AED,OUT,Card,Noon.com,United Arab Emirates,Payment
+T-00332,27,2026-10-16 19:09,4637.7,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00333,10,2026-10-17 19:26,4707.21,AED,OUT,Card,Noon.com,United Arab Emirates,Payment
+T-00334,23,2026-10-18 09:40,1930.76,AED,OUT,Card,Carrefour,United Arab Emirates,Payment
+T-00335,7,2026-10-18 11:28,25000,AED,IN,Transfer,S. Mehta,India,Transfer
+T-00336,8,2026-10-18 12:00,29073.48,AED,OUT,Cheque,Noon.com,United Arab Emirates,Payment
+T-00337,21,2026-10-18 12:03,508.56,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00338,23,2026-10-18 17:16,1518.97,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00339,13,2026-10-18 18:03,12623.42,AED,OUT,Card,Sharjah Rentals,United Arab Emirates,Payment
+T-00340,25,2026-10-18 18:09,1270.72,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00341,19,2026-10-19 12:11,5546.97,AED,OUT,Cheque,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00342,18,2026-10-19 14:28,1466.87,AED,OUT,Cheque,Carrefour,United Arab Emirates,Payment
+T-00343,16,2026-10-19 17:20,552.46,AED,OUT,Cheque,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00344,14,2026-10-19 17:23,1665.63,AED,OUT,Card,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00345,29,2026-10-19 18:14,926.92,AED,OUT,Card,Noon.com,United Arab Emirates,Payment
+T-00346,28,2026-10-19 19:23,6414.32,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00347,7,2026-10-20 11:38,28000,AED,IN,Transfer,Unknown remitter,India,Transfer
+T-00348,21,2026-10-20 15:19,1244.75,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00349,20,2026-10-20 15:50,1204.67,AED,OUT,Transfer,Noon.com,United Arab Emirates,Payment
+T-00350,3,2026-10-20 16:51,95500,AED,IN,Cash,Walk-in customer,United Arab Emirates,Gold bullion sale
+T-00351,13,2026-10-20 16:56,7939.52,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00352,15,2026-10-21 09:05,1744.33,AED,OUT,Card,Sharjah Rentals,United Arab Emirates,Payment
+T-00353,8,2026-10-21 16:11,16515.79,AED,OUT,Cheque,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00354,29,2026-10-22 09:18,1117.5,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00355,7,2026-10-22 11:10,20000,AED,IN,Transfer,Unknown remitter,India,Transfer
+T-00356,10,2026-10-22 12:23,6185.58,AED,OUT,Cheque,Sharjah Rentals,United Arab Emirates,Payment
+T-00357,9,2026-10-22 12:35,533.9,AED,OUT,Card,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00358,22,2026-10-22 13:05,9643.62,AED,OUT,Card,Sharjah Rentals,United Arab Emirates,Payment
+T-00359,12,2026-10-22 13:53,874.74,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00360,26,2026-10-22 16:38,684.46,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00361,28,2026-10-23 09:38,15289.64,AED,OUT,Cheque,Sharjah Rentals,United Arab Emirates,Payment
+T-00362,8,2026-10-23 11:22,21240.05,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00363,22,2026-10-23 18:42,7112.56,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00364,20,2026-10-23 20:06,2995.41,AED,OUT,Cheque,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00365,27,2026-10-24 09:56,13191.23,AED,OUT,Card,Sharjah Rentals,United Arab Emirates,Payment
+T-00366,7,2026-10-24 11:05,95000,AED,OUT,Transfer,Crypto Exchange FZE,United Arab Emirates,Top-up
+T-00367,27,2026-10-24 11:33,11543.92,AED,OUT,Card,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00368,27,2026-10-24 11:33,6368.33,AED,OUT,Cheque,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00369,29,2026-10-24 15:02,806.95,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00370,15,2026-10-24 18:40,1748.86,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00371,1,2026-10-24 19:19,4611.85,AED,OUT,Cheque,Al Futtaim Motors,United Arab Emirates,Payment
+T-00372,18,2026-10-24 19:40,565.61,AED,OUT,Card,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00373,20,2026-10-25 10:28,1995.75,AED,OUT,Cheque,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00374,5,2026-10-25 11:33,88000,AED,OUT,Wire,Lagos Express FX,Nigeria,Customer remittance
+T-00375,1,2026-10-25 12:18,5860.1,AED,OUT,Card,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00376,19,2026-10-25 15:39,7796.77,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00377,26,2026-10-25 16:02,566.26,AED,OUT,Card,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00378,8,2026-10-25 17:50,26671.09,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00379,20,2026-10-25 19:04,1511.48,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00380,14,2026-10-25 19:39,1187.69,AED,OUT,Card,Carrefour,United Arab Emirates,Payment
+T-00381,16,2026-10-26 12:49,441.88,AED,OUT,Cheque,Al Futtaim Motors,United Arab Emirates,Payment
+T-00382,30,2026-10-26 15:36,1398.15,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00383,18,2026-10-26 16:46,1613.05,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00384,18,2026-10-26 20:39,1019.69,AED,OUT,Transfer,Noon.com,United Arab Emirates,Payment
+T-00385,11,2026-10-27 10:55,6418.44,AED,OUT,Card,Al Futtaim Motors,United Arab Emirates,Payment
+T-00386,1,2026-10-27 11:30,6090.95,AED,OUT,Card,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00387,17,2026-10-27 13:04,3325.47,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00388,16,2026-10-27 17:01,719.25,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00389,23,2026-10-27 17:53,1313.17,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00390,7,2026-10-28 12:24,904.87,AED,OUT,Card,Al Futtaim Motors,United Arab Emirates,Payment
+T-00391,29,2026-10-28 20:20,818.35,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00392,17,2026-10-29 14:14,2488.22,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00393,21,2026-10-29 17:50,488.11,AED,OUT,Transfer,Al Futtaim Motors,United Arab Emirates,Payment
+T-00394,19,2026-10-29 18:24,4794.88,AED,OUT,Card,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00395,12,2026-10-29 19:17,469.95,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00396,30,2026-10-30 15:10,2194.0,AED,OUT,Card,Sharjah Rentals,United Arab Emirates,Payment
+T-00397,1,2026-10-30 16:32,4479.14,AED,OUT,Card,Etisalat,United Arab Emirates,Payment
+T-00398,9,2026-10-31 10:07,515.83,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00399,26,2026-10-31 17:04,691.45,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00400,29,2026-10-31 19:56,1029.84,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00401,8,2026-10-31 20:17,21116.0,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00402,7,2026-10-31 20:32,1391.6,AED,OUT,Cheque,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00403,28,2026-11-01 10:10,14139.4,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00404,17,2026-11-01 10:17,1691.04,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00405,25,2026-11-01 14:40,807.77,AED,OUT,Card,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00406,13,2026-11-01 16:08,5009.03,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00407,17,2026-11-01 17:37,2496.52,AED,OUT,Cheque,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00408,30,2026-11-02 09:01,1135.79,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00409,15,2026-11-02 10:29,1549.69,AED,OUT,Card,Carrefour,United Arab Emirates,Payment
+T-00410,1,2026-11-02 16:45,6289.64,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00411,21,2026-11-02 18:34,894.23,AED,OUT,Card,Carrefour,United Arab Emirates,Payment
+T-00412,13,2026-11-02 19:21,8098.16,AED,OUT,Transfer,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00413,14,2026-11-02 20:26,786.02,AED,OUT,Transfer,Dubai Electricity & Water,United Arab Emirates,Payment
+T-00414,9,2026-11-03 14:18,1178.04,AED,OUT,Card,Carrefour,United Arab Emirates,Payment
+T-00415,21,2026-11-03 14:59,1205.1,AED,OUT,Cheque,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00416,23,2026-11-03 15:03,1620.51,AED,OUT,Transfer,Noon.com,United Arab Emirates,Payment
+T-00417,14,2026-11-03 17:02,1165.0,AED,OUT,Card,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00418,16,2026-11-04 09:33,695.1,AED,OUT,Transfer,Carrefour,United Arab Emirates,Payment
+T-00419,24,2026-11-04 12:59,5176.15,AED,OUT,Cheque,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00420,24,2026-11-04 13:11,3707.01,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00421,23,2026-11-04 18:14,781.53,AED,OUT,Cheque,Gulf Logistics FZE,United Arab Emirates,Payment
+T-00422,24,2026-11-04 20:54,8221.77,AED,OUT,Card,Etisalat,United Arab Emirates,Payment
+T-00423,12,2026-11-05 10:17,507.82,AED,OUT,Cheque,Al Futtaim Motors,United Arab Emirates,Payment
+T-00424,20,2026-11-05 10:26,2752.38,AED,OUT,Card,Carrefour,United Arab Emirates,Payment
+T-00425,1,2026-11-05 11:52,2415.11,AED,OUT,Card,Al Futtaim Motors,United Arab Emirates,Payment
+T-00426,9,2026-11-05 15:20,1042.18,AED,OUT,Card,Sharjah Rentals,United Arab Emirates,Payment
+T-00427,19,2026-11-05 15:33,4035.09,AED,OUT,Cheque,Sharjah Rentals,United Arab Emirates,Payment
+T-00428,26,2026-11-05 18:55,734.9,AED,OUT,Cheque,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00429,5,2026-11-06 09:04,469518.09,AED,IN,Cash,Branch cash collection,United Arab Emirates,Daily cash takings
+T-00430,10,2026-11-06 16:57,9278.13,AED,OUT,Transfer,Etisalat,United Arab Emirates,Payment
+T-00431,27,2026-11-06 19:51,9626.46,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00432,19,2026-11-07 11:27,5673.07,AED,OUT,Transfer,Emirates Supplies LLC,United Arab Emirates,Payment
+T-00433,11,2026-11-07 14:04,4166.38,AED,OUT,Transfer,Sharjah Rentals,United Arab Emirates,Payment
+T-00434,24,2026-11-07 16:02,9251.27,AED,OUT,Transfer,Al Noor Foodstuff Trading,United Arab Emirates,Payment
+T-00435,13,2026-11-07 16:12,8328.4,AED,OUT,Cheque,Carrefour,United Arab Emirates,Payment
+T-00436,10,2026-11-07 17:44,6539.95,AED,OUT,Card,Dubai Electricity & Water,United Arab Emirates,Payment
