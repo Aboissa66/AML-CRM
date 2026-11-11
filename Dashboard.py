@@ -9,7 +9,7 @@ import db
 from ui import NEON, setup, stat_card
 
 setup("Dashboard")
-st.title("AML Compliance CRM")
+st.title("🛡️ AML Compliance CRM")
 st.caption("Customer due diligence, risk rating and periodic review, in one place.")
 
 df = db.customers_df()

@@ -203,9 +203,9 @@ not only the decision but the reasoning, and to keep records for at least 5 year
 
 ## 6. Look and feel
 
-`ui.py` holds the shared pieces: the dark neon CSS, the stat cards (`stat_card()`) and the customer form
-(`customer_form()`). `.streamlit/config.toml` sets the dark theme. Charts use Streamlit's built-in
-`st.bar_chart()`, so they follow the theme without extra styling.
+`ui.py` holds the shared pieces: the number tiles (`stat_card()`, a thin wrapper around `st.metric`) and the
+customer form (`customer_form()`). The app uses Streamlit's default light theme (`.streamlit/config.toml`) and its
+built-in charts (`st.bar_chart()`), so there is no custom styling to maintain.
 
 ## Where to change things
 

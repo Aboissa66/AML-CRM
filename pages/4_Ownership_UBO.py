@@ -52,10 +52,10 @@ def dot_graph() -> str:
         "digraph G {",
         'bgcolor="transparent"; rankdir=TB; nodesep=0.3; ranksep=0.5;',
         'node [shape=box, style="rounded,filled", fontsize=15, margin="0.1,0.05", width=0, height=0, '
-        f'fontcolor="{NEON["text"]}", color="{NEON["cyan"]}", fillcolor="#0E1626", penwidth=1.4];',
+        f'fontcolor="{NEON["text"]}", color="{NEON["cyan"]}", fillcolor="#FFFFFF", penwidth=1.4];',
         f'edge [color="{NEON["muted"]}", fontcolor="{NEON["text"]}", fontsize=13, arrowsize=0.7];',
         f'root [label={q(c["full_name"] + chr(10) + "(customer)")}, color="{NEON["cyan"]}", penwidth=2.5, '
-        f'fontsize=17, fillcolor="#0B2733"];',
+        f'fontsize=17, fillcolor="#E8F1FB"];',
     ]
     ubo_names = {p["name"] for p in a["ubos"]}
     pep_names = {p["name"] for p in a["people"] if p["pep"]}
@@ -70,7 +70,7 @@ def dot_graph() -> str:
             tags = (" · UBO" if is_ubo else "") + (" · PEP" if o["name"] in pep_names else "")
             label = f"{o['name']}{tags}\n{o['nationality']}"
             lines.append(f'{nid} [label={q(label)}, shape=box, style="rounded,filled,bold", color="{color}", '
-                         f'penwidth={3 if is_ubo else 1.4}, fillcolor="{"#0B2A22" if is_ubo else "#0E1626"}"];')
+                         f'penwidth={3 if is_ubo else 1.4}, fillcolor="{"#E9F7EC" if is_ubo else "#FFFFFF"}"];')
         return person_ids[o["name"]]
 
     for o in owners:
@@ -79,7 +79,7 @@ def dot_graph() -> str:
             risky = any(o["id"] == r["id"] for r in a["risky_corporates"])
             color = NEON["pink"] if risky else NEON["violet"]
             label = f"{o['name']}\n{o['nationality']}"
-            lines.append(f'{node} [label={q(label)}, color="{color}", fillcolor="#1A1433"];')
+            lines.append(f'{node} [label={q(label)}, color="{color}", fillcolor="#F1ECFA"];')
         else:
             node = person_node(o)
         parent = "root" if o["parent_owner_id"] is None else f"o{o['parent_owner_id']}"
