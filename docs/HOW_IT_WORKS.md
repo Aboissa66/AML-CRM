@@ -68,6 +68,9 @@ clock (`db.set_kyc_status()`); a change of rating moves the review date (`db.upd
 **Document checklist** (`required_documents()`): individuals need ID, proof of address and source of funds
 evidence; companies need trade licence, MOA/AOA, shareholder register, board resolution, UBO declaration and
 signatory IDs. High risk adds an EDD form and senior management approval.
+On the customer's *Documents* tab, a ring chart shows the **completion rate**: every required document
+carries the same weight (100% divided by the number of documents), so the rate is simply
+received ÷ required. Ticking or unticking a box updates it straight away.
 
 **Approval guard rails** (`pages/1_Customers.py`, KYC decision tab): you can't approve while documents are
 missing, while sanctions alerts are open, or if there's a confirmed sanctions match. Every decision needs a

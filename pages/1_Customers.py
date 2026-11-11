@@ -3,6 +3,8 @@
 import json
 from datetime import date
 
+import altair as alt
+import pandas as pd
 import streamlit as st
 
 import db
@@ -112,12 +114,33 @@ with tab_risk:
 with tab_docs:
     docs = db.documents_for(cid)
     got = sum(d["received"] for d in docs)
-    st.progress(got / len(docs) if docs else 0, text=f"{got} of {len(docs)} documents received")
-    for d in docs:
-        new = st.checkbox(d["doc_type"], bool(d["received"]), key=f"doc_{cid}_{d['doc_type']}")
-        if new != bool(d["received"]):
-            db.set_document(cid, d["doc_type"], new, user)
-            st.rerun()
+    weight = 100 / len(docs) if docs else 0          # every document counts the same
+    pct = got * weight
+    chart_col, list_col = st.columns([1, 1.4])
+    with chart_col:
+        st.markdown("**Document completion**")
+        parts = pd.DataFrame({"Status": ["Received", "Outstanding"],
+                              "Share": [pct, 100 - pct],
+                              "Documents": [got, len(docs) - got]})
+        ring = alt.Chart(parts).mark_arc(innerRadius=70, outerRadius=105).encode(
+            theta=alt.Theta("Share:Q", stack=True),
+            color=alt.Color("Status:N", scale=alt.Scale(domain=["Received", "Outstanding"],
+                                                        range=["#2CA02C", "#E6EAF1"]),
+                            legend=alt.Legend(orient="bottom", title=None)),
+            order=alt.Order("Status:N", sort="descending"),
+            tooltip=["Status", "Documents", alt.Tooltip("Share:Q", title="%", format=".0f")])
+        label = alt.Chart(pd.DataFrame({"t": [f"{pct:.0f}%"]})).mark_text(fontSize=28, fontWeight="bold").encode(
+            text="t:N")
+        st.altair_chart((ring + label).properties(height=260), width="stretch")
+        st.caption(f"{got} of {len(docs)} received. Each document weighs {weight:.1f}%.")
+    with list_col:
+        st.markdown("**Checklist**")
+        for d in docs:
+            new = st.checkbox(f"{d['doc_type']} ({weight:.1f}%)", bool(d["received"]),
+                              key=f"doc_{cid}_{d['doc_type']}")
+            if new != bool(d["received"]):
+                db.set_document(cid, d["doc_type"], new, user)
+                st.rerun()
 
 with tab_decision:
     docs_complete = all(d["received"] for d in db.documents_for(cid))
