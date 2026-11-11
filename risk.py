@@ -22,7 +22,9 @@ FATF_GREYLIST = {
     "British Virgin Islands",
 }
 
-COUNTRIES = sorted({
+from uae_activities import ALL_COUNTRIES, TRADE_LICENCE_ACTIVITIES
+
+COUNTRIES = sorted(set(ALL_COUNTRIES) | {
     "United Arab Emirates", "Saudi Arabia", "Egypt", "India", "Pakistan",
     "United Kingdom", "United States", "Germany", "France", "China", "Russia",
     "Turkey", "Jordan", "Oman", "Qatar", "Kuwait", "Bahrain", "Philippines",
@@ -47,10 +49,15 @@ MEDIUM_RISK_ACTIVITIES = {
     "Freight / logistics",
     "Consultancy",
 }
-ACTIVITIES = sorted(HIGH_RISK_ACTIVITIES | MEDIUM_RISK_ACTIVITIES | {
+# Company trade licence activities (uae_activities.py) carry their own risk level.
+HIGH_RISK_ACTIVITIES |= {a for a, r in TRADE_LICENCE_ACTIVITIES.items() if r == "High"}
+MEDIUM_RISK_ACTIVITIES |= {a for a, r in TRADE_LICENCE_ACTIVITIES.items() if r == "Medium"}
+
+# Occupations offered for individuals (the older generic list, also used by the demo data).
+ACTIVITIES = sorted((HIGH_RISK_ACTIVITIES | MEDIUM_RISK_ACTIVITIES | {
     "Salaried employee", "Government employee", "Student", "Retired",
     "IT services", "Healthcare", "Retail (non-cash)", "Manufacturing",
-})
+}) - set(TRADE_LICENCE_ACTIVITIES))
 
 SOURCES_OF_FUNDS = [
     "Salary", "Business income", "Investments", "Inheritance",

@@ -54,6 +54,14 @@ explainable (you see the reasons on the customer's *Risk assessment* tab).
 **Bands:** 0–24 **Low**, 25–49 **Medium**, 50+ **High**. Some factors "force High" whatever the score, because the
 law requires enhanced due diligence for them regardless of anything else.
 
+**Onboarding forms** (`ui.customer_form()`, page `pages/2_Add_Customer.py`): the analyst first picks
+*Individual* or *Company* and gets a different form for each. The company form asks for company full name,
+incorporation country, registration / trade licence no., licence registration and expiry dates (calendar
+pickers) and the trade licence activity. Activities come from `uae_activities.py`, a sample of UAE licence
+activities each tagged High, Medium or Low risk, and that tag feeds the activity points above. Both forms
+share a *Risk profile* section (source of funds, expected volume, channel, PEP, cash intensive) because
+those fields drive the rating and transaction monitoring.
+
 **Periodic review** (`next_review_date()`): High every 1 year, Medium 2 years, Low 3 years. An approval resets the
 clock (`db.set_kyc_status()`); a change of rating moves the review date (`db.update_customer()`).
 
@@ -212,6 +220,7 @@ built-in charts (`st.bar_chart()`), so there is no custom styling to maintain.
 | I want to… | Edit |
 |---|---|
 | Change risk points, bands or review cycles | `risk.py` |
+| Add or re-rate a UAE trade licence activity | `TRADE_LICENCE_ACTIVITIES` in `uae_activities.py` |
 | Update FATF country lists | `FATF_BLACKLIST` / `FATF_GREYLIST` in `risk.py` |
 | Change the UBO threshold or offshore list | `UBO_THRESHOLD` / `OFFSHORE` in `ubo.py` |
 | Tune name matching | `COMPANY_WORDS`, `normalise()`, `screen()` in `sanctions.py` |
