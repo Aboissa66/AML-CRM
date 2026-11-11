@@ -334,3 +334,61 @@ def seed_demo():
         for row in f:
             conn.execute("INSERT INTO findings (test_id, finding, severity, action, owner, due, status, closed_on) "
                          "VALUES (?,?,?,?,?,?,?,?)", (*row, d(-25) if row[-1] == "Closed" else None))
+
+
+# ---------------------------------------------------------------------------
+# Governance dashboard
+# ---------------------------------------------------------------------------
+FREQ_MONTHS = {"Monthly": 1, "Quarterly": 3, "Semi-annual": 6, "Annual": 12}
+
+
+def area_status(tests: pd.DataFrame, findings: pd.DataFrame, today: date | None = None) -> pd.DataFrame:
+    """One row per control area: latest test, its result, when the next test is due, and open findings."""
+    today = today or date.today()
+    rows = []
+    for area in AREAS:
+        t = tests[tests.area == area].sort_values("tested_on")
+        f = findings[(findings.area == area) & (findings.status != "Closed")]
+        if t.empty:
+            last, result, due, test_state = None, "Not tested", None, "Never tested"
+        else:
+            r = t.iloc[-1]
+            last, result = r.tested_on, r.result
+            due = _add_months(date.fromisoformat(r.tested_on), FREQ_MONTHS.get(r.frequency, 12)).isoformat()
+            test_state = "Test overdue" if due < today.isoformat() else "On schedule"
+        rows.append({"Control area": area, "Last tested": last, "Result": result, "Next test due": due,
+                     "Schedule": test_state, "Open findings": len(f),
+                     "Overdue findings": int((f.status == "Overdue").sum())})
+    return pd.DataFrame(rows)
+
+
+def attention_items(policies: pd.DataFrame, tests: pd.DataFrame, findings: pd.DataFrame) -> pd.DataFrame:
+    """Everything senior management should act on, most urgent first (priority 1 = act now)."""
+    items = []
+    for p in policies.itertuples():
+        if p.status == "Overdue":
+            items.append((1, "Policy", f"{p.name} is past its review date ({p.next_review})", p.owner))
+        elif p.status == "Due for review":
+            items.append((2, "Policy", f"{p.name} is due for review on {p.next_review}", p.owner))
+        elif p.status == "Draft":
+            items.append((2, "Policy", f"{p.name} {p.version} awaits approval (at: {WORKFLOW[p.stage]})", p.owner))
+        if p.status != "Draft" and p.attested_pct is not None and p.attested_pct < 90:
+            items.append((3, "Policy", f"{p.name}: only {p.attested_pct}% of staff have attested", p.owner))
+    for c in policy_controls():
+        if c["Status"] == "Differs":
+            items.append((2, "Control", f"{c['Policy rule']}: policy says {c['Policy says']}, Sanad is set to "
+                                        f"{c['Sanad setting']}", "MLRO"))
+    for f in findings[findings.status != "Closed"].itertuples():
+        pr = 1 if f.status == "Overdue" or f.severity == "High" else 3
+        state = f"overdue since {f.due}" if f.status == "Overdue" else f"due {f.due}"
+        items.append((pr, "Finding", f"{f.severity}: {f.finding} ({state})", f.owner))
+    for a in area_status(tests, findings).to_dict("records"):
+        if a["Result"] == "Ineffective":
+            items.append((1, "Testing", f"{a['Control area']} was ineffective at the last test ({a['Last tested']})",
+                          "Compliance"))
+        if a["Schedule"] in ("Never tested", "Test overdue"):
+            when = ("has never been tested" if a["Schedule"] == "Never tested"
+                    else f"test was due {a['Next test due']}")
+            items.append((3, "Testing", f"{a['Control area']} {when}", "Compliance"))
+    df = pd.DataFrame(items, columns=["priority", "Type", "Item", "Owner"])
+    return df.sort_values(["priority", "Type"], kind="stable").reset_index(drop=True)

@@ -236,6 +236,12 @@ for the chosen period. The MLRO quarterly report combines all the others (long t
 reports) and adds the MLRO's conclusions. `to_excel()` writes one sheet per section; `to_html()` writes a clean
 printable page you open in a browser and print to PDF.
 
+**Governance dashboard** (`pages/11_Governance_Dashboard.py`). `area_status()` gives each control area its latest
+test, result and next test date (last test plus its frequency); an area with no test is "Never tested".
+`attention_items()` builds the management to-do list and ranks it: **Act now** for overdue policies, ineffective
+controls, and high or overdue findings; **This month** for policies due for review or awaiting approval and policy
+rules that differ from Sanad's settings; **Monitor** for low attestation, other open findings and tests that are due.
+
 ---
 
 ## 7. Look and feel

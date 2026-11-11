@@ -16,6 +16,7 @@ nav = st.navigation({
         st.Page("pages/6_Investigations.py", title="Investigations", icon="🗂️"),
     ],
     "Governance": [
+        st.Page("pages/11_Governance_Dashboard.py", title="Governance Dashboard", icon="🛡️"),
         st.Page("pages/8_Policy_Management.py", title="Policy Management", icon="📘"),
         st.Page("pages/9_Effectiveness_Testing.py", title="Effectiveness Testing", icon="🧪"),
         st.Page("pages/10_Reports.py", title="Reports", icon="📄"),
