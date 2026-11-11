@@ -6,10 +6,10 @@ import pandas as pd
 import streamlit as st
 
 import db
-from ui import NEON, setup, stat_card
+from ui import ASSETS, NEON, setup, stat_card
 
 setup("Dashboard")
-st.title("🛡️ AML Compliance CRM")
+st.image(str(ASSETS / "sanad-logo.png"), width=420)
 st.caption("Customer due diligence, risk rating and periodic review, in one place.")
 
 df = db.customers_df()

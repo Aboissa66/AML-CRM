@@ -1,12 +1,15 @@
 """Shared Streamlit pieces used by several pages."""
 
 from datetime import date
+from pathlib import Path
 
 import streamlit as st
 
 import db
 from risk import ACTIVITIES, CHANNELS, COUNTRIES, SOURCES_OF_FUNDS
 from uae_activities import ACTIVITY_LIST
+
+ASSETS = Path(__file__).parent / "assets"   # Sanad logo files
 
 RATING_COLORS = {"High": "🔴", "Medium": "🟠", "Low": "🟢"}
 
@@ -20,7 +23,8 @@ RISK_PALETTE = {"Low": NEON["green"], "Medium": NEON["amber"], "High": NEON["pin
 
 
 def setup(title: str):
-    st.set_page_config(page_title=f"AML CRM · {title}", page_icon="🛡️", layout="wide")
+    st.set_page_config(page_title=f"Sanad · {title}", page_icon=str(ASSETS / "sanad-mark.png"), layout="wide")
+    st.logo(str(ASSETS / "sanad-logo-compact.png"), icon_image=str(ASSETS / "sanad-mark.png"), size="large")
     if db.is_empty():
         import seed
         seed.main()

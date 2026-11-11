@@ -1,4 +1,6 @@
-# AML Compliance CRM (prototype)
+# Sanad (سند): AML & Sanctions Compliance Tool (prototype)
+
+![Sanad](assets/sanad-logo.png)
 
 A small learning project: KYC, customer risk rating, UBO identification, sanctions screening
 and transaction monitoring for a UAE context. **Dummy data only.**
