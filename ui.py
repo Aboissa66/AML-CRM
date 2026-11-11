@@ -126,15 +126,3 @@ def stat_card(col, label: str, value, color: str, sub: str = ""):
     col.markdown(f'<div class="neon-card" style="--c:{color}"><div class="lbl">{label}</div>'
                  f'<div class="val">{value}</div><div class="sub">{sub}</div></div>',
                  unsafe_allow_html=True)
-
-
-def neon_chart(chart, height: int = 260):
-    """Apply the dark neon look to an Altair chart."""
-    return (chart.properties(height=height, background="transparent")
-            .configure_view(stroke=None)
-            .configure_axis(labelColor=NEON["muted"], titleColor=NEON["muted"], gridColor=NEON["grid"],
-                            domainColor=NEON["grid"], tickColor=NEON["grid"], labelFont="Exo 2",
-                            titleFont="Exo 2", labelFontSize=12)
-            .configure_legend(labelColor=NEON["text"], titleColor=NEON["muted"], labelFont="Exo 2",
-                              orient="bottom", symbolType="circle")
-            .configure_text(font="Orbitron"))

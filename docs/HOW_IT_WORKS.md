@@ -203,8 +203,9 @@ not only the decision but the reasoning, and to keep records for at least 5 year
 
 ## 6. Look and feel
 
-`ui.py` holds the shared pieces: the dark neon CSS, the stat cards (`stat_card()`), the chart styling
-(`neon_chart()`) and the customer form (`customer_form()`). `.streamlit/config.toml` sets the dark theme.
+`ui.py` holds the shared pieces: the dark neon CSS, the stat cards (`stat_card()`) and the customer form
+(`customer_form()`). `.streamlit/config.toml` sets the dark theme. Charts use Streamlit's built-in
+`st.bar_chart()`, so they follow the theme without extra styling.
 
 ## Where to change things
 

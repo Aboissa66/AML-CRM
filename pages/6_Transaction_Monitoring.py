@@ -4,13 +4,12 @@ import copy
 from datetime import datetime
 from pathlib import Path
 
-import altair as alt
 import pandas as pd
 import streamlit as st
 
 import db
 import tm
-from ui import NEON, neon_chart, setup, stat_card
+from ui import NEON, setup, stat_card
 
 setup("Transaction monitoring")
 st.title("Transaction monitoring")
@@ -109,12 +108,7 @@ with tab_data:
     else:
         daily = (txns.assign(day=txns.ts.dt.floor("D"))
                  .groupby(["day", "direction"]).amount_aed.sum().reset_index())
-        chart = alt.Chart(daily).mark_bar(cornerRadiusTopLeft=3, cornerRadiusTopRight=3).encode(
-            x=alt.X("day:T", title=None), y=alt.Y("amount_aed:Q", title="AED"),
-            color=alt.Color("direction:N", scale=alt.Scale(domain=["IN", "OUT"],
-                                                           range=[NEON["cyan"], NEON["violet"]]), title=None),
-            tooltip=[alt.Tooltip("day:T"), "direction", alt.Tooltip("amount_aed:Q", format=",.0f")])
-        st.altair_chart(neon_chart(chart, height=220), width="stretch")
+        st.bar_chart(daily, x="day", y="amount_aed", color="direction", x_label="", y_label="AED", height=220)
         who = st.selectbox("Customer", ["All"] + sorted(txns.customer.unique()))
         view = txns if who == "All" else txns[txns.customer == who]
         st.dataframe(view[["ts", "txn_id", "customer", "direction", "channel", "amount", "currency", "amount_aed",
@@ -127,19 +121,12 @@ with tab_alerts:
     if alerts.empty:
         st.info("No alerts yet. Load the sample transactions from the 'Upload transactions' tab.")
     else:
-        sev_colors = {"Critical": NEON["pink"], "High": "#FF7A45", "Medium": NEON["amber"], "Low": NEON["green"]}
         left, right = st.columns([1, 2])
         with left:
-            st.markdown('<div class="panel-title">Open alerts by rule</div>', unsafe_allow_html=True)
-            by_rule = open_alerts.groupby(["rule", "severity"]).size().reset_index(name="Alerts")
+            st.subheader("Open alerts by rule")
+            by_rule = open_alerts.groupby("rule").size().rename("Alerts")
             if not by_rule.empty:
-                bars = alt.Chart(by_rule).mark_bar(cornerRadiusEnd=6, height=14).encode(
-                    y=alt.Y("rule:N", title=None, axis=alt.Axis(labelLimit=220)),
-                    x=alt.X("Alerts:Q", title=None),
-                    color=alt.Color("severity:N", scale=alt.Scale(domain=list(sev_colors),
-                                                                  range=list(sev_colors.values())), title=None),
-                    tooltip=["rule", "severity", "Alerts"])
-                st.altair_chart(neon_chart(bars, height=230), width="stretch")
+                st.bar_chart(by_rule, horizontal=True, height=230)
         with right:
             show = st.multiselect("Status", sorted(alerts.status.unique()), default=["Open"])
             view = alerts[alerts.status.isin(show)] if show else alerts
