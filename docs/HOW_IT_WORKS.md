@@ -212,7 +212,33 @@ not only the decision but the reasoning, and to keep records for at least 5 year
 
 ---
 
-## 6. Look and feel
+## 6. Governance: policies, effectiveness testing and reports
+
+**Where:** `governance.py`, `reports.py`, pages `8_Policy_Management.py`, `9_Effectiveness_Testing.py`, `10_Reports.py`
+
+**Policy management.** Each policy has a version, owner, approver, review cycle and staff count. It moves through
+a fixed workflow (`WORKFLOW`): Drafted, Compliance review, Senior management, Board approved, Published to staff.
+Each move needs a note (who approved, meeting reference) and is written to the audit log. Status is worked out,
+never typed: before Board approval it is **Draft**; after that it is **Overdue** if the next review date has passed,
+**Due for review** within 30 days, otherwise **Current**. Starting a new version sends the policy back to Drafted.
+`policy_controls()` puts each policy rule next to the Sanad setting that enforces it (UBO threshold, monitoring
+thresholds, review cycles) and flags any that **differ**. The demo deliberately has one difference (medium risk
+review: 18 months in the policy, 2 years in the app) so you can see it.
+
+**Effectiveness testing.** A test records the control area, what is tested, the method, sample size, items passed,
+tester and evidence. The result is set by `result_for()`: 95% or more passed is **Effective**, 80 to 94% is
+**Partially effective**, below 80% is **Ineffective**. The quarter grid shows the latest result per area per quarter.
+Findings carry a severity, action, owner and due date; an open finding past its due date shows as **Overdue**, and
+closing one needs a note on how the fix was verified.
+
+**Reports.** `reports.build(key, start, end)` returns a title and a list of sections (text or tables) from live data
+for the chosen period. The MLRO quarterly report combines all the others (long tables are left to the detailed
+reports) and adds the MLRO's conclusions. `to_excel()` writes one sheet per section; `to_html()` writes a clean
+printable page you open in a browser and print to PDF.
+
+---
+
+## 7. Look and feel
 
 `ui.py` holds the shared pieces: the number tiles (`stat_card()`, a thin wrapper around `st.metric`) and the
 customer form (`customer_form()`). The app uses Streamlit's default light theme (`.streamlit/config.toml`) and its
@@ -229,3 +255,5 @@ built-in charts (`st.bar_chart()`), so there is no custom styling to maintain.
 | Tune name matching | `COMPANY_WORDS`, `normalise()`, `screen()` in `sanctions.py` |
 | Change monitoring thresholds permanently | `DEFAULT_RULES` in `tm.py` |
 | Add a monitoring rule | add a block in `tm.run_rules()` and an entry in `DEFAULT_RULES` |
+| Change the policy workflow or test result bands | `WORKFLOW` / `result_for()` in `governance.py` |
+| Add a report | an entry in `REPORTS` and a builder in `reports.py` |

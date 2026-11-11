@@ -57,6 +57,8 @@ def _bootstrap():
             sanctions.load_training_list()
             sanctions.screen(user="seed")
         _load_demo_data()
+        import governance
+        governance.seed_demo()
 
 
 def _load_demo_data():

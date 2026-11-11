@@ -33,6 +33,9 @@ or run `python seed.py`.
 | Sanctions Screening | Download OFAC, UN and EU lists, upload the UAE Local Terrorist List, fuzzy-screen every customer, owner, director and manager, and review alerts (false positive, potential match / PNMR, true match / FFR). A fictional training list is built in |
 | Transaction Monitoring | Upload transactions as CSV (or load the 436-row sample with planted red flags), run 7 tunable rules (large cash, structuring, high risk countries, rapid in/out, profile deviation, round amounts, sanctioned counterparties) and triage alerts |
 | Investigations | Investigate alerts, write the narrative, close or file an STR, and download a goAML-style STR draft. An STR moves the customer to High risk |
+| Policy Management (Governance) | Policy register with versions, owners and review dates; approval workflow (drafted, compliance review, senior management, Board, published to staff) with a note at each step; staff attestation; each policy rule compared with the Sanad setting that enforces it |
+| Effectiveness Testing (Governance) | Record periodic control tests (method, sample, passed, evidence); result set automatically; quarter-by-quarter grid; raise findings with owner and due date and close them with evidence |
+| Reports (Governance) | 8 ready-made reports (MLRO quarterly pack, customer risk, KYC, sanctions, monitoring, testing, policies, audit trail) for a chosen period, downloadable as Excel or a printable report (print to PDF) |
 | Audit Log | Every action, who did it and when |
 
 ## Files
@@ -46,6 +49,8 @@ or run `python seed.py`.
 | `tm.py` | Transaction import, monitoring rules, alerts, cases and STR drafts |
 | `make_sample_transactions.py` | Regenerates `data/sample_transactions.csv` |
 | `ubo.py` | UBO calculation and ownership red flags |
+| `governance.py` | Policies, approval workflow, control tests, findings and their demo data |
+| `reports.py` | Builds each report and exports it to Excel or printable HTML |
 | `risk.py` | Risk scoring rules, country and sector lists, review cycles, document checklists. **Edit this to change how customers are rated.** |
 | `db.py` | SQLite database (`aml_crm.db`, created automatically) |
 | `seed.py` | Dummy data generator |
