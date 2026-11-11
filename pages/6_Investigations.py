@@ -1,4 +1,4 @@
-"""Investigation cases and STR filing."""
+"""Investigations (cases) and STR filing."""
 
 import streamlit as st
 
@@ -6,8 +6,8 @@ import db
 import tm
 from ui import NEON, setup, stat_card
 
-setup("Cases")
-st.title("Cases")
+setup("Investigations")
+st.title("Investigations")
 st.caption("Investigate alerts, write the narrative and decide: close with no suspicion, or file an STR.")
 user = st.session_state["user"]
 tm.init()
@@ -20,30 +20,30 @@ stat_card(k3, "STR filed", int((cases.status == "STR filed").sum()), NEON["pink"
 stat_card(k4, "Closed", int((cases.status == "Closed - no suspicion").sum()), NEON["green"], "no suspicion")
 
 if cases.empty:
-    st.info("No cases yet. Open one from the alerts on the Transaction Monitoring page.")
+    st.info("No investigations yet. Open one from the alerts on the Transaction Monitoring page.")
     st.stop()
 
 st.dataframe(cases[["id", "customer", "title", "priority", "status", "assigned_to", "opened_at", "closed_at"]],
              hide_index=True, width="stretch",
-             column_config={"id": "Case", "customer": "Customer", "title": "Title", "priority": "Priority",
+             column_config={"id": "Investigation", "customer": "Customer", "title": "Title", "priority": "Priority",
                             "status": "Status", "assigned_to": "Analyst", "opened_at": "Opened", "closed_at": "Closed"})
 
 labels = {f"#{k.id} · {k.customer} · {k.status}": int(k.id) for k in cases.itertuples()}
 default = st.session_state.get("open_case")
 keys = list(labels)
 idx = next((i for i, l in enumerate(keys) if labels[l] == default), 0)
-case_id = labels[st.selectbox("Open case", keys, index=idx)]
+case_id = labels[st.selectbox("Open investigation", keys, index=idx)]
 k = cases[cases.id == case_id].iloc[0]
 c = db.get_customer(int(k.customer_id))
 
 st.divider()
-st.header(f"Case #{case_id}: {k.title}")
+st.header(f"Investigation #{case_id}: {k.title}")
 st.markdown(f"**Customer:** {c['full_name']} ({c['customer_type']}, {c['activity']}) · **risk** {c['risk_rating']} · "
             f"**priority** {k.priority} · **status** {k.status}")
 
 left, right = st.columns([1.2, 1])
 with left:
-    st.subheader("Alerts in this case")
+    st.subheader("Alerts in this investigation")
     for a in tm.case_alerts(case_id).itertuples():
         st.markdown(f"- **[{a.severity}] {a.rule}**: {a.description}")
     st.subheader("All transactions for this customer")
@@ -67,16 +67,16 @@ with right:
                         "AED 203,200 in four cash deposits each below AED 55,000...")
         status = st.radio("Decision", tm.CASE_STATUSES, index=tm.CASE_STATUSES.index(k.status), horizontal=False)
         note = st.text_input("Decision rationale / action taken", k.decision_note or "")
-        go = st.form_submit_button("Save case", type="primary", disabled=closed)
+        go = st.form_submit_button("Save investigation", type="primary", disabled=closed)
     if go:
         if status in ("STR filed", "Closed - no suspicion") and (not narrative.strip() or not note.strip()):
-            st.error("A narrative and a rationale are required before closing a case or filing an STR.")
+            st.error("A narrative and a rationale are required before closing an investigation or filing an STR.")
         else:
             tm.update_case(case_id, status, narrative.strip(), note.strip(), user)
             st.success("Saved.")
             st.rerun()
     if closed:
-        st.info(f"This case is closed ({k.status}). Open a new case for new activity.")
+        st.info(f"This investigation is closed ({k.status}). Open a new one for new activity.")
     if k.status == "STR filed" or status == "STR filed":
         st.download_button("Download STR draft (.txt)", tm.str_report(case_id), f"STR_case_{case_id}.txt",
                            "text/plain", type="primary")

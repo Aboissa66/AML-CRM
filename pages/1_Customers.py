@@ -82,7 +82,7 @@ with tab_screen:
         n = sanctions.screen(cid, st.session_state.get("screen_threshold", 85), user)
         st.toast(f"{n} new alert(s)")
         st.rerun()
-    st.page_link("pages/5_Sanctions_Screening.py", label="Review alerts on the Sanctions Screening page", icon="🛰️")
+    st.page_link("pages/4_Sanctions_Screening.py", label="Review alerts on the Sanctions Screening page", icon="🛰️")
 
 with tab_owners:
     if c["customer_type"] != "Company":
@@ -95,7 +95,7 @@ with tab_owners:
                         + (", **PEP**" if p["pep"] else ""))
         if not a["ubos"]:
             st.warning("No beneficial owner identified yet.")
-        st.page_link("pages/4_Ownership_UBO.py", label="Open the ownership tree and edit owners", icon="🕸️")
+        st.page_link("pages/3_Ownership_UBO.py", label="Open the ownership tree and edit owners", icon="🕸️")
 
 with tab_profile:
     updated = customer_form(f"edit_{cid}", c)

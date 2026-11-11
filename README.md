@@ -27,17 +27,18 @@ or run `python seed.py`.
 | Dashboard | Risk and KYC status overview, expired IDs, pending KYC, overdue reviews |
 | Customers | Search and filter, open a profile, edit KYC details, see why the risk rating was given, tick off documents, approve or reject with a rationale, view the audit trail |
 | Add Customer | Onboard an individual or company; risk rating and document checklist are generated |
-| Audit Log | Every action, who did it and when |
 | Ownership & UBO | Record shareholders (people or companies, in layers), directors and managers; see the ownership tree, effective percentages, the UBOs (25% rule with senior management fallback) and ownership red flags, which feed the risk score |
 | Sanctions Screening | Download OFAC, UN and EU lists, upload the UAE Local Terrorist List, fuzzy-screen every customer, owner, director and manager, and review alerts (false positive, potential match / PNMR, true match / FFR). A fictional training list is built in |
 | Transaction Monitoring | Upload transactions as CSV (or load the 436-row sample with planted red flags), run 7 tunable rules (large cash, structuring, high risk countries, rapid in/out, profile deviation, round amounts, sanctioned counterparties) and triage alerts |
-| Cases | Investigate alerts, write the narrative, close or file an STR, and download a goAML-style STR draft. An STR moves the customer to High risk |
+| Investigations | Investigate alerts, write the narrative, close or file an STR, and download a goAML-style STR draft. An STR moves the customer to High risk |
+| Audit Log | Every action, who did it and when |
 
 ## Files
 
 | File | Purpose |
 |---|---|
-| `Dashboard.py` | Home page |
+| `Dashboard.py` | Entry point: sets the sidebar order and page names |
+| `pages/0_Home.py` | Home page |
 | `pages/` | The other pages |
 | `sanctions.py` | List download, parsing and fuzzy name screening |
 | `tm.py` | Transaction import, monitoring rules, alerts, cases and STR drafts |

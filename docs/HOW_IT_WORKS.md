@@ -7,7 +7,7 @@ implements it. Read it next to the code. All data in the app is fictional.
 
 ```
                  ┌────────────────────────── Streamlit pages (pages/*.py, Dashboard.py) ─────────────────────────┐
- you click  ───▶ │ Customers · Add Customer · Ownership & UBO · Sanctions · Transaction Monitoring · Cases · Audit │
+ you click  ───▶ │ Customers · Add Customer · Ownership & UBO · Sanctions · Transaction Monitoring · Investigations · Audit │
                  └───────────────┬───────────────────────────────┬───────────────────────────────┬───────────────┘
                                  │                               │                               │
                           risk.py (scoring)              ubo.py (ownership)          sanctions.py / tm.py (detection)
@@ -109,14 +109,14 @@ empty) or owns a company one layer up. Directors and senior managers hang off th
 | Ownership doesn't add up to 100% somewhere | +10 |
 | A PEP among owners, directors or managers | +30, forces High (in `risk.py`) |
 
-**The tree picture** (`pages/4_Ownership_UBO.py` → `dot_graph()`) is drawn with Graphviz: one box per company,
+**The tree picture** (`pages/3_Ownership_UBO.py` → `dot_graph()`) is drawn with Graphviz: one box per company,
 one box per person, solid arrows for shareholdings with the percentage, dashed arrows for roles.
 
 ---
 
 ## 3. Sanctions screening
 
-**Where:** `sanctions.py`; page `pages/5_Sanctions_Screening.py`
+**Where:** `sanctions.py`; page `pages/4_Sanctions_Screening.py`
 
 ### Getting the lists (`update_list()`)
 
@@ -161,7 +161,7 @@ tree. Screening runs automatically when you add a customer or an owner, and on d
 
 ## 4. Transaction monitoring
 
-**Where:** `tm.py`; pages `pages/6_Transaction_Monitoring.py` and `pages/7_Cases.py`
+**Where:** `tm.py`; pages `pages/5_Transaction_Monitoring.py` and `pages/6_Investigations.py`
 
 ### Import (`import_csv()`)
 
@@ -188,7 +188,7 @@ rule + period, so running the rules again only adds genuinely new alerts.
 
 1. **Triage** (*Alerts* tab): either close alerts with an explanation (`close_alert()`), or tick them and
    **open a case** (`open_case()`).
-2. **Investigate** (*Cases* page): see every transaction for the customer and their KYC, write the narrative.
+2. **Investigate** (*Investigations* page): see every transaction for the customer and their KYC, write the narrative.
 3. **Decide** (`update_case()`): *Closed – no suspicion*, or **STR filed**. Closing or filing requires a
    narrative and a rationale.
 4. **STR draft** (`str_report()`): builds a text report laid out like the goAML sections (subject, red flags,
@@ -204,7 +204,7 @@ donations wired to Yemen (Hope Bridge Charity), and a salary account with sudden
 
 ## 5. Audit trail
 
-**Where:** `db.log()`, page `pages/3_Audit_Log.py`
+**Where:** `db.log()`, page `pages/7_Audit_Log.py`
 
 Every write (customer created or edited, document ticked, KYC decision, owner added or removed, list refreshed,
 screening run, alert decision, case update) records **who, when, what and why**. Regulators expect you to show

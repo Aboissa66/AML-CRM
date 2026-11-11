@@ -13,7 +13,7 @@ from ui import NEON, setup, stat_card
 
 setup("Transaction monitoring")
 st.title("Transaction monitoring")
-st.caption("Upload transactions as CSV, run the detection rules, and turn alerts into cases.")
+st.caption("Upload transactions as CSV, run the detection rules, and turn alerts into investigations.")
 user = st.session_state["user"]
 tm.init()
 st.session_state.setdefault("tm_rules", copy.deepcopy(tm.DEFAULT_RULES))
@@ -29,8 +29,8 @@ stat_card(k1, "Transactions", f"{len(txns):,}", NEON["cyan"],
 stat_card(k2, "Open alerts", len(open_alerts), NEON["pink"],
           f"{int((open_alerts.severity.isin(['Critical', 'High'])).sum())} critical or high")
 stat_card(k3, "Customers alerted", open_alerts.customer_id.nunique(), NEON["amber"], "with open alerts")
-stat_card(k4, "Open cases", int((tm.cases_df().status.isin(["Open", "Investigating"])).sum()), NEON["violet"],
-          "see the Cases page")
+stat_card(k4, "Open investigations", int((tm.cases_df().status.isin(["Open", "Investigating"])).sum()), NEON["violet"],
+          "see the Investigations page")
 
 with st.expander("📘 AML note: how transaction monitoring works"):
     st.markdown("""
@@ -44,7 +44,7 @@ and with known money laundering **typologies**. Each rule here is a typology:
 * **Round amounts and large cash:** common in trade-based laundering and cash-intensive businesses.
 
 An alert is **not** a suspicion yet. The analyst reviews it, looks for a legitimate explanation (ask the customer
-only if it won't tip them off), and either closes it with a rationale or opens a **case**. If suspicion remains,
+only if it won't tip them off), and either closes it with a rationale or opens an **investigation**. If suspicion remains,
 file an **STR** to the UAE FIU through goAML **without delay**, and never tell the customer (tipping off is a crime
 under Federal Decree-Law No. 20 of 2018).
 
@@ -158,15 +158,15 @@ with tab_alerts:
                                         "counterparty_country"]], hide_index=True, width="stretch")
             a1, a2 = st.columns(2)
             with a1.form("new_case_form"):
-                title = st.text_input("Case title", f"{cust}: {mine.rule.iloc[0].lower()}")
+                title = st.text_input("Investigation title", f"{cust}: {mine.rule.iloc[0].lower()}")
                 prio = st.selectbox("Priority", ["High", "Medium", "Low"],
                                     index=0 if mine.severity.isin(["Critical", "High"]).any() else 1)
-                if st.form_submit_button("Open a case with the ticked alerts", type="primary"):
+                if st.form_submit_button("Open an investigation with the ticked alerts", type="primary"):
                     if picked:
                         case_id = tm.open_case(cid, picked, title, prio, user)
                         st.session_state["open_case"] = case_id
-                        st.success(f"Case #{case_id} opened. Continue on the Cases page.")
-                        st.page_link("pages/7_Cases.py", label="Go to the case", icon="🗂️")
+                        st.success(f"Investigation #{case_id} opened. Continue on the Investigations page.")
+                        st.page_link("pages/6_Investigations.py", label="Go to the investigation", icon="🗂️")
                     else:
                         st.error("Tick at least one alert.")
             with a2.form("close_alerts"):
