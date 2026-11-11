@@ -1,11 +1,18 @@
 """Entry point of Sanad. Run with:  streamlit run Dashboard.py
 
-It only sets the order, names and sections of the pages in the sidebar. Each page lives in pages/.
+It shows the sign-in page until someone signs in, then sets the order, names and sections of the pages
+in the sidebar, keeping only the pages the signed-in role may see. Each page lives in pages/.
 """
 
 import streamlit as st
 
-nav = st.navigation({
+import auth
+
+if not auth.signed_in():
+    st.navigation([st.Page(auth.login_page, title="Sign in", url_path="sign-in")], position="hidden").run()
+    st.stop()
+
+sections = {
     "": [
         st.Page("pages/0_Home.py", title="Dashboard", icon="🏠", default=True),
         st.Page("pages/1_Customers.py", title="Customers", icon="👥"),
@@ -22,5 +29,8 @@ nav = st.navigation({
         st.Page("pages/10_Reports.py", title="Reports", icon="📄"),
         st.Page("pages/7_Audit_Log.py", title="Audit Log", icon="📜"),
     ],
-})
+}
+# Each role sees only its own pages (see auth.ROLES).
+visible = {sec: [p for p in pages if auth.allowed(p.title)] for sec, pages in sections.items()}
+nav = st.navigation({sec: pages for sec, pages in visible.items() if pages})
 nav.run()

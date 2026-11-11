@@ -24,13 +24,16 @@ RISK_PALETTE = {"Low": NEON["green"], "Medium": NEON["amber"], "High": NEON["pin
 
 
 def setup(title: str):
-    st.set_page_config(page_title=f"Sanad · {title}", page_icon=str(ASSETS / "sanad-mark.png"), layout="wide")
+    st.set_page_config(page_title=f"Sanad · {title}", page_icon=str(ASSETS / "sanad-mark.png"), layout="wide",
+                       initial_sidebar_state="expanded")
     st.logo(str(ASSETS / "sanad-logo-compact.png"), icon_image=str(ASSETS / "sanad-mark.png"), size="large")
     _bootstrap()
     with st.sidebar:
+        import auth
+        st.markdown(f"Signed in as **{st.session_state['user']}**  \n{st.session_state['role']}")
+        if st.button("Sign out", icon="🚪"):
+            auth.sign_out()
         st.caption("Demo with fictional data only. Never enter real customer data.")
-        st.session_state.setdefault("user", "analyst")
-        st.session_state["user"] = st.text_input("Your name (for the audit log)", st.session_state["user"])
 
 
 _demo_lock = threading.Lock()
