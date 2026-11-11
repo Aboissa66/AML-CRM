@@ -1,4 +1,4 @@
-# Sanad (سند): AML & Sanctions Compliance Tool (prototype)
+# Sanad (سند): AML & Sanctions CMS (prototype)
 
 ![Sanad](assets/sanad-logo.png)
 
