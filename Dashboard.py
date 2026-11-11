@@ -17,10 +17,11 @@ nav = st.navigation({
     ],
     "Governance": [
         st.Page("pages/11_Governance_Dashboard.py", title="Governance Dashboard", icon="🛡️"),
+        st.Page("pages/12_EWRA.py", title="Risk Assessment (EWRA)", icon="🧭"),
         st.Page("pages/8_Policy_Management.py", title="Policy Management", icon="📘"),
         st.Page("pages/9_Effectiveness_Testing.py", title="Effectiveness Testing", icon="🧪"),
         st.Page("pages/10_Reports.py", title="Reports", icon="📄"),
         st.Page("pages/7_Audit_Log.py", title="Audit Log", icon="📜"),
     ],
-})
+}, expanded=True)   # show every page; by default Streamlit folds long menus behind "View more"
 nav.run()

@@ -31,6 +31,8 @@ REPORTS = {
                 "Board and internal audit"),
     "policies": ("Policy register", "Policies, versions, approvals, review dates, staff attestation.",
                  "Board and inspections"),
+    "ewra": ("Enterprise-wide risk assessment", "Inherent and residual risk by factor, appetite, action plan.",
+             "Board and inspections"),
     "audit": ("Audit trail extract", "Who did what and when, in the period.", "Inspections"),
 }
 
@@ -167,14 +169,22 @@ def _audit(start, end):
                  "details": "Details"}))]
 
 
+def _ewra(start, end):
+    import ewra
+    e = ewra.current()
+    if e is None:
+        return [("Enterprise-wide risk assessment", "No assessment recorded yet.")]
+    return ewra.report_sections(e)
+
+
 def build(key: str, start: date, end: date) -> tuple[str, list]:
     title = REPORTS[key][0]
     parts = {"risk": _risk, "kyc": _kyc, "sanctions": _sanctions, "tm": _tm, "testing": _testing,
-             "policies": _policies, "audit": _audit}
+             "policies": _policies, "ewra": _ewra, "audit": _audit}
     if key != "mlro":
         return title, parts[key](start, end)
     sections = []
-    for k in ["risk", "kyc", "sanctions", "tm", "testing", "policies"]:
+    for k in ["risk", "kyc", "sanctions", "tm", "testing", "policies", "ewra"]:
         secs = parts[k](start, end)
         sections += [s for s in secs if not (isinstance(s[1], pd.DataFrame) and len(s[1]) > 15)]
     return title, sections

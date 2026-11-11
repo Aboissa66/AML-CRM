@@ -390,5 +390,18 @@ def attention_items(policies: pd.DataFrame, tests: pd.DataFrame, findings: pd.Da
             when = ("has never been tested" if a["Schedule"] == "Never tested"
                     else f"test was due {a['Next test due']}")
             items.append((3, "Testing", f"{a['Control area']} {when}", "Compliance"))
+    import ewra
+    approved = ewra.latest_approved()
+    cur = ewra.current()
+    if approved is None:
+        stage = f" (current draft at: {WORKFLOW[cur['stage']]})" if cur else ""
+        items.append((2, "EWRA", f"No approved enterprise-wide risk assessment{stage}", "MLRO"))
+    elif approved["approved_on"] and approved["approved_on"] < (date.today() - timedelta(days=365)).isoformat():
+        items.append((1, "EWRA", f"EWRA last approved {approved['approved_on']}, more than 12 months ago", "MLRO"))
+    if cur:
+        for r in ewra.compute(cur).itertuples():
+            if r[-1]:   # above appetite
+                items.append((2, "EWRA", f"{r[1]}: residual risk {r.Residual} is above the {cur['appetite']} "
+                                         f"appetite", "MLRO"))
     df = pd.DataFrame(items, columns=["priority", "Type", "Item", "Owner"])
     return df.sort_values(["priority", "Type"], kind="stable").reset_index(drop=True)

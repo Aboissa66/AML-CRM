@@ -59,6 +59,8 @@ def _bootstrap():
         _load_demo_data()
         import governance
         governance.seed_demo()
+        import ewra
+        ewra.seed_demo()
 
 
 def _load_demo_data():

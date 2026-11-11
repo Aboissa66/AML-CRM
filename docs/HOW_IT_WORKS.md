@@ -242,6 +242,20 @@ test, result and next test date (last test plus its frequency); an area with no 
 controls, and high or overdue findings; **This month** for policies due for review or awaiting approval and policy
 rules that differ from Sanad's settings; **Monitor** for low attestation, other open findings and tests that are due.
 
+**Enterprise-wide risk assessment** (`ewra.py`, `pages/12_EWRA.py`). Six risk factors: Customers, Geography,
+Products and services, Delivery channels, Transactions, Sanctions and proliferation financing.
+- **Inherent risk** is set from live data by the thresholds in `INHERENT_RULES` (for example, Customers is High
+  when over 25% of customers are High risk). Products and services is set by the MLRO. The MLRO can override any
+  rating with a reason, which is logged.
+- **Control strength** comes from the latest Effectiveness testing result of the control areas mapped to each
+  factor in `FACTORS`: any Ineffective = Weak, all Effective = Strong, mostly Effective = Adequate, otherwise or
+  never tested = Needs improvement.
+- **Residual risk** = `RESIDUAL[inherent][strength]`. A factor whose residual risk is above the risk appetite
+  needs an action. Overall risk is the highest factor, except that one High factor alone gives Medium-High.
+- The assessment uses the policy workflow; on Board approval the results are saved as a **snapshot** so the
+  approved version never changes. The Governance Dashboard flags a missing or out-of-date approved EWRA and
+  factors above appetite; the EWRA is also a report and part of the MLRO pack.
+
 ---
 
 ## 7. Look and feel
@@ -262,4 +276,5 @@ built-in charts (`st.bar_chart()`), so there is no custom styling to maintain.
 | Change monitoring thresholds permanently | `DEFAULT_RULES` in `tm.py` |
 | Add a monitoring rule | add a block in `tm.run_rules()` and an entry in `DEFAULT_RULES` |
 | Change the policy workflow or test result bands | `WORKFLOW` / `result_for()` in `governance.py` |
+| Change EWRA thresholds, factor-to-control mapping or the residual matrix | `INHERENT_RULES` / `_auto_inherent()`, `FACTORS`, `RESIDUAL` in `ewra.py` |
 | Add a report | an entry in `REPORTS` and a builder in `reports.py` |
