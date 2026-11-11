@@ -339,7 +339,7 @@ def str_report(case_id: int) -> str:
     lines = [
         "SUSPICIOUS TRANSACTION REPORT (DRAFT) - for submission via goAML to the UAE FIU",
         f"Prepared: {datetime.now():%d %b %Y %H:%M}   Case #{case_id}   Analyst: {k.assigned_to}",
-        "", "1. REPORTING ENTITY", "   AML CRM prototype (training data only)",
+        "", "1. REPORTING ENTITY", "   Sanad AML & Sanctions CMS prototype (training data only)",
         "", "2. SUBJECT",
         f"   Name: {c['full_name']} ({c['customer_type']})",
         f"   ID / licence: {c['id_number']}   Nationality / incorporation: {c['nationality']}",

@@ -10,6 +10,8 @@ from ui import ASSETS, NEON, setup, stat_card
 
 setup("Dashboard")
 st.image(str(ASSETS / "sanad-logo.png"), width=420)
+st.info("**Demo:** every customer, transaction and alert here is fictional. Explore freely: open a customer, "
+        "check the sanctions alerts, or follow the open investigation on the Investigations page.", icon="🧪")
 st.caption("Customer due diligence, risk rating and periodic review, in one place.")
 
 df = db.customers_df()

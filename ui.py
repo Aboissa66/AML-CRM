@@ -2,6 +2,7 @@
 
 from datetime import date
 from pathlib import Path
+import threading
 
 import streamlit as st
 
@@ -25,20 +26,62 @@ RISK_PALETTE = {"Low": NEON["green"], "Medium": NEON["amber"], "High": NEON["pin
 def setup(title: str):
     st.set_page_config(page_title=f"Sanad · {title}", page_icon=str(ASSETS / "sanad-mark.png"), layout="wide")
     st.logo(str(ASSETS / "sanad-logo-compact.png"), icon_image=str(ASSETS / "sanad-mark.png"), size="large")
-    if db.is_empty():
-        import seed
-        seed.main()
-    elif db.owners_missing():   # database created before the UBO module existed
-        import seed
-        seed.seed_owners()
-    import sanctions
-    if not sanctions.has_list("Training list"):   # always have the fictional training list to practise with
-        sanctions.load_training_list()
-        sanctions.screen(user="seed")
+    _bootstrap()
     with st.sidebar:
-        st.caption("Prototype with dummy data only. Not for real customer data.")
+        st.caption("Demo with fictional data only. Never enter real customer data.")
         st.session_state.setdefault("user", "analyst")
         st.session_state["user"] = st.text_input("Your name (for the audit log)", st.session_state["user"])
+
+
+_demo_lock = threading.Lock()
+
+DEMO_NARRATIVE = (
+    "Between the dates shown, the customer made several cash deposits, each just below the AED 55,000 "
+    "reporting threshold, within a few days. The pattern does not match the declared profile and source "
+    "of funds. Next steps: request an explanation and supporting documents (without tipping off), check "
+    "linked accounts, then decide whether to file an STR via goAML.")
+
+
+def _bootstrap():
+    """Create the demo database on first run. One lock, so two visitors arriving at once on a fresh
+    database don't both seed it."""
+    with _demo_lock:
+        if db.is_empty():
+            import seed
+            seed.main()
+        elif db.owners_missing():   # database created before the UBO module existed
+            import seed
+            seed.seed_owners()
+        import sanctions
+        if not sanctions.has_list("Training list"):   # always have the fictional training list to practise with
+            sanctions.load_training_list()
+            sanctions.screen(user="seed")
+        _load_demo_data()
+
+
+def _load_demo_data():
+    """Demo mode: on a fresh database, load the sample transactions, run the monitoring rules and open one
+    investigation, so every page has something to show. Runs once; does nothing if transactions exist."""
+    import copy
+
+    import pandas as pd
+
+    import tm
+    # Called inside _bootstrap's lock.
+    tm.init()
+    if not tm.transactions_df().empty:
+        return
+    sample = Path(__file__).parent / "data" / "sample_transactions.csv"
+    if not sample.exists():
+        return
+    tm.import_csv(pd.read_csv(sample, dtype=str), "sample_transactions.csv", "demo")
+    tm.run_rules(copy.deepcopy(tm.DEFAULT_RULES), "demo")
+    alerts = tm.alerts_df("Open")
+    reza = alerts[alerts.customer == "Reza Tehrani"]
+    if tm.cases_df().empty and not reza.empty:
+        case_id = tm.open_case(int(reza.customer_id.iloc[0]), [int(i) for i in reza.id],
+                               "Reza Tehrani: possible structuring", "High", "demo")
+        tm.update_case(case_id, "Investigating", DEMO_NARRATIVE, "", "demo")
 
 
 def badge(rating: str) -> str:
