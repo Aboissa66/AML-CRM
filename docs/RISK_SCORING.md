@@ -1,4 +1,4 @@
-# Sanad EWRA: logic and scoring
+# Sanad risk logic and scoring: EWRA and customer risk
 
 Sanad rates six risk factors in four steps: how risky the business is (**inherent**), how well the controls work
 (**control strength**), what risk is left (**residual**), and whether that is acceptable (**appetite**).
@@ -57,3 +57,41 @@ Effectiveness tests ► 2 Control strength ┘                                  
   factors above appetite.
 
 All thresholds live in `ewra.py` (`_auto_inherent`, `FACTORS`, `RESIDUAL`, `overall`).
+
+---
+
+# Customer risk scoring matrix
+
+Points for every factor that applies. **50 or more = High, 25 to 49 = Medium, under 25 = Low.** Factors marked
+"forces High" make the customer High whatever the total. Logic in `risk.score_customer()` and `ubo.risk_factors()`.
+
+| Risk factor | Condition | Points | Forces High |
+|---|---|---|---|
+| Country (nationality / incorporation, and residence / operations, each scored) | FATF black list | +40 each | Yes |
+| | FATF grey list | +20 each | |
+| PEP | Customer is a PEP | +30 | Yes |
+| Activity / occupation | High-risk activity | +25 | |
+| | Medium-risk activity | +10 | |
+| Cash | Cash-intensive | +15 | |
+| Delivery channel | Non face to face | +10 | |
+| Source of funds | Other / unclear | +15 | |
+| Expected monthly volume | AED 1m or more | +15 | |
+| | AED 250k to under 1m | +5 | |
+| Legal entity | Company | +5 | |
+| Ownership (companies) | Not yet recorded | +10 | |
+| | 2+ layers of companies | +15 | |
+| | Offshore or high-risk jurisdiction in the chain | +15 | |
+| | No natural person at 25% or more | +10 | |
+| | Shares not fully identified | +10 | |
+| | PEP among owners, directors or managers | +30 | Yes |
+| Sanctions | Confirmed match | +100 | Yes |
+| Suspicious activity | STR filed | +40 | Yes |
+
+| Rating | Review cycle | Extra documents |
+|---|---|---|
+| High | 1 year | EDD form, senior management approval |
+| Medium | 2 years | standard checklist |
+| Low | 3 years | standard checklist |
+
+Example: UAE general trading company, remote onboarding, cash-intensive, AED 300k a month, two company layers:
+25 + 15 + 10 + 5 + 5 + 15 = **75, High**.
