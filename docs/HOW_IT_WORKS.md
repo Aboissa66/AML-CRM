@@ -242,7 +242,7 @@ test, result and next test date (last test plus its frequency); an area with no 
 controls, and high or overdue findings; **This month** for policies due for review or awaiting approval and policy
 rules that differ from Sanad's settings; **Monitor** for low attestation, other open findings and tests that are due.
 
-**Enterprise-wide risk assessment** (`ewra.py`, `pages/12_EWRA.py`). Six risk factors: Customers, Geography,
+**Enterprise-wide risk assessment** (`ewra.py`, `pages/12_EWRA.py`; full method in `docs/EWRA_METHODOLOGY.md`). Six risk factors: Customers, Geography,
 Products and services, Delivery channels, Transactions, Sanctions and proliferation financing.
 - **Inherent risk** is set from live data by the thresholds in `INHERENT_RULES` (for example, Customers is High
   when over 25% of customers are High risk). Products and services is set by the MLRO. The MLRO can override any
