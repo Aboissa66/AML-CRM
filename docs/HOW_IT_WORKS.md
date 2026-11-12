@@ -258,7 +258,7 @@ Products and services, Delivery channels, Transactions, Sanctions and proliferat
 
 ---
 
-## 7. AI document intake (`doc_ai.py`, page "AI Document Intake")
+## 7. AI document intake (`doc_ai.py` and `ai_intake.py`, Add Customer → "Read documents with AI")
 
 The page turns KYC documents into profile fields. The AI only proposes; a person decides.
 

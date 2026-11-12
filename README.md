@@ -38,8 +38,8 @@ Without a key the page still works with the bundled fictional samples, using sav
 |---|---|
 | Dashboard | Risk and KYC status overview, expired IDs, pending KYC, overdue reviews |
 | Customers | Search and filter, open a profile, edit KYC details, see why the risk rating was given, tick off documents, approve or reject with a rationale, view the audit trail |
-| Add Customer | Onboard an individual or company; risk rating and document checklist are generated |
-| AI Document Intake | Upload a passport, Emirates ID, trade licence or MOA (PDF or photo). AI reads the fields; you review and correct them before saving to a new or existing customer. MOA shareholders and directors can be added to the ownership tree. Saving re-runs the risk score and sanctions screening and is audit-logged. Needs an Anthropic API key (see below); fictional samples in `samples/` work without one |
+| Add Customer | Onboard an individual or company by hand, or with **Read documents with AI** (see next row); risk rating and document checklist are generated |
+| Add Customer → Read documents with AI | Upload a passport, Emirates ID, trade licence or MOA (PDF or photo). AI reads the fields; you review and correct them before saving to a new or existing customer. MOA shareholders and directors can be added to the ownership tree. Saving re-runs the risk score and sanctions screening and is audit-logged. Needs an Anthropic API key (see below); fictional samples in `samples/` work without one |
 | Ownership & UBO | Record shareholders (people or companies, in layers), directors and managers; see the ownership tree, effective percentages, the UBOs (25% rule with senior management fallback) and ownership red flags, which feed the risk score |
 | Sanctions Screening | Download OFAC, UN and EU lists, upload the UAE Local Terrorist List, fuzzy-screen every customer, owner, director and manager, and review alerts (false positive, potential match / PNMR, true match / FFR). A fictional training list is built in |
 | Transaction Monitoring | Upload transactions as CSV (or load the 436-row sample with planted red flags), run 7 tunable rules (large cash, structuring, high risk countries, rapid in/out, profile deviation, round amounts, sanctioned counterparties) and triage alerts |
@@ -61,6 +61,7 @@ Without a key the page still works with the bundled fictional samples, using sav
 | `sanctions.py` | List download, parsing and fuzzy name screening |
 | `tm.py` | Transaction import, monitoring rules, alerts, cases and STR drafts |
 | `make_sample_transactions.py` | Regenerates `data/sample_transactions.csv` |
+| `ai_intake.py` | The AI document screens shown on the Add Customer page |
 | `doc_ai.py` | AI document intake: reads a document with Claude, rule checks (expiry, shareholdings), merges several documents, daily usage cap |
 | `samples/` | Fictional specimen documents for AI intake, their saved results, and the script that makes them |
 | `ubo.py` | UBO calculation and ownership red flags |

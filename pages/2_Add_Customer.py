@@ -4,14 +4,20 @@ import json
 
 import streamlit as st
 
+import ai_intake
 import db
 import sanctions
 from ui import badge, customer_form, setup
 
 setup("Add customer")
 st.title("Onboard a customer")
-st.caption("Fill in the KYC details. The risk rating and document checklist are generated automatically.")
+how = st.segmented_control("How do you want to add the customer?", ["Enter details by hand", "Read documents with AI"],
+                           default="Enter details by hand", key="add_how") or "Enter details by hand"
+if how == "Read documents with AI":
+    ai_intake.render()
+    st.stop()
 
+st.caption("Fill in the KYC details. The risk rating and document checklist are generated automatically.")
 kind = st.segmented_control("Customer type", ["Individual", "Company"], default="Individual",
                             key="new_customer_type")
 kind = kind or "Individual"
